@@ -1,3 +1,4 @@
+'use strict';
 require('../lib/string-class.js');
 
 describe('string class extension tests', function() {
@@ -8,7 +9,7 @@ describe('string class extension tests', function() {
       expect('the truth will set you free'.hasVowels()).toBeDefined();
       expect('the truth will set you free'.hasVowels()).toBe(true);
       expect('yamaha'.hasVowels()).toBeTruthy();
-      expect(typeof ('the truth will set you free'.hasVowels())).toBe('boolean');
+      expect(typeof 'the truth will set you free'.hasVowels()).toBe('boolean');
       expect('yzf'.hasVowels()).toBe(false);
       expect('yzf'.hasVowels()).toBeFalsy();
     });
@@ -16,7 +17,7 @@ describe('string class extension tests', function() {
 
   describe('to upper', function() {
     // Check whether a string is converted to uppercase.
-    it('Returns the correct output for different strings', function () {
+    it('Returns the correct output for different strings', function() {
       expect('asgsf'.toUpper()).toBeDefined();
       expect('uieywr'.toUpper()).not.toBeUndefined();
       expect('jeremy'.toUpper()).toBeTruthy();
@@ -54,7 +55,7 @@ describe('string class extension tests', function() {
       expect('ASYNCHRONOUS'.ucFirst()).toBe('ASYNCHRONOUS');
       expect('check for handling space'.ucFirst()).toBe('Check for handling space');
       expect('expectations'.ucFirst()).toBeTruthy();
-    })
+    });
   });
 
   describe('is the string a question', function() {
@@ -78,7 +79,7 @@ describe('string class extension tests', function() {
       expect('tell me more'.words()).toBeTruthy();
       expect(''.words()).toEqual([]);
       expect('team js rocks'.words()).toEqual(['team', 'js', 'rocks']);
-    })
+    });
   });
 
   describe('number of words in a string', function() {
@@ -114,5 +115,5 @@ describe('string class extension tests', function() {
       expect('9,874.00'.fromCurrency()).toBe(9874);
       expect('53,342.623'.fromCurrency()).toBe(53342.623);
     });
-  })
+  });
 });
