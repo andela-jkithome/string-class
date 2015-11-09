@@ -79,6 +79,7 @@ describe('string class extension tests', function() {
       expect('tell me more'.words()).toBeTruthy();
       expect(''.words()).toEqual([]);
       expect('team js rocks'.words()).toEqual(['team', 'js', 'rocks']);
+      expect('what are thoose 3289237612'.words()).toEqual(['what', 'are','thoose']);
     });
   });
 
@@ -88,7 +89,7 @@ describe('string class extension tests', function() {
       expect('Kanye west'.wordCount()).toBeDefined();
       expect('zombie attire'.wordCount()).toBeTruthy();
       expect(typeof 'deez round objects'.wordCount()).toBe('number');
-      expect('hey, sema!'.wordCount()).toBe(2);
+      expect('hey, sema'.wordCount()).toBe(2);
       expect('what are thoose'.wordCount()).toBe(3);
     });
   });
@@ -100,7 +101,7 @@ describe('string class extension tests', function() {
       expect('10000'.toCurrency()).toBeTruthy();
       expect(typeof '563256'.toCurrency()).toBe('string');
       expect('2500'.toCurrency()).toBe('2,500.00');
-      expect('32657.466'.toCurrency()).toBe('32,657.466');
+      expect('32657.466'.toCurrency()).toBe('32,657.47');
       expect('32653462576'.toCurrency()).toBe('32,653,462,576.00');
     });
   });
