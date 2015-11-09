@@ -81,6 +81,7 @@
         expect(''.words()).toEqual([]);
         expect('team js rocks'.words()).toEqual(['team', 'js', 'rocks']);
         expect('what are thoose 3289237612'.words()).toEqual(['what', 'are', 'thoose']);
+        expect('Special characters @$@^%#&$%^&$'.words()).toEqual(['Special', 'characters']);
       });
     });
 
